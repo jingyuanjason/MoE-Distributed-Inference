@@ -1,0 +1,17 @@
+[project]
+name = "moe-llm-serving"
+version = "0.1.0"
+description = "YAML-configured vLLM serving for MoE distributed inference"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "pyyaml>=6.0",
+    "vllm>=0.6.0",
+]
+
+[tool.uv]
+package = false
+# Force the CUDA runtime headers to match the bundled nvcc (13.4); flashinfer
+# JIT compilation rejects a compiler/headers version mismatch, and vllm's
+# resolver otherwise picks nvidia-cuda-runtime 13.0.
+override-dependencies = ["nvidia-cuda-runtime==13.4.92"]

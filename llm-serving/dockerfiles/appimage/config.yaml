@@ -1,0 +1,8 @@
+# Bind to all container interfaces so Docker port publishing works.
+model: Qwen/Qwen2.5-0.5B-Instruct
+host: "0.0.0.0"
+port: 8000
+dtype: auto
+tensor-parallel-size: 1
+gpu-memory-utilization: 0.9
+max-model-len: 4096

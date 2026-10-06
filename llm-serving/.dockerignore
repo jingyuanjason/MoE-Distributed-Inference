@@ -1,0 +1,9 @@
+# Only application build inputs are sent to Docker (no local secrets/weights).
+**
+!vllm_server.py
+!dockerfiles/
+!dockerfiles/appimage/
+!dockerfiles/appimage/config.yaml
+!dockerfiles/appimage/Dockerfile
+!dockerfiles/baseimage/
+!dockerfiles/baseimage/Dockerfile

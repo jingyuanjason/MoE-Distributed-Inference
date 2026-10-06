@@ -1,0 +1,10 @@
+# vLLM CLI long-form option names; choose a model that fits your hardware.
+model: Qwen/Qwen2.5-0.5B-Instruct
+host: "127.0.0.1"
+port: 8000
+dtype: auto
+tensor-parallel-size: 1
+gpu-memory-utilization: 0.9
+max-model-len: 4096
+# For supported MoE models, enable expert parallelism as needed:
+# enable-expert-parallel: true
