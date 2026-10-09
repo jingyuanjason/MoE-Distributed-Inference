@@ -102,8 +102,10 @@ live while the run is active, final once finished):
 | `requests_succeeded` / `requests_failed` | outcome counts               |
 | `success_rate` / `failure_rate`          | 0–1                          |
 | `prompt_tokens` / `completion_tokens`    | totals reported by the endpoint |
-| `avg_tokens_per_second` | mean per-request completion throughput               |
-| `tokens_per_second`     | completion tokens ÷ run duration                     |
+| `avg_input_tokens_per_second` | mean per-request prompt-token processing rate  |
+| `avg_output_tokens_per_second` | mean per-request completion throughput        |
+| `input_tokens_per_second`     | prompt tokens ÷ run duration                   |
+| `output_tokens_per_second`    | completion tokens ÷ run duration               |
 
 ### `GET /health`
 

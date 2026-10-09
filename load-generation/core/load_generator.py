@@ -197,17 +197,23 @@ class LoadRun:
 
         Rates are computed over finished requests so far; ``duration_seconds``
         is the wall-clock time from run start until it finished (or now, if
-        still running). ``avg_tokens_per_second`` averages the per-request
-        completion-token throughput (tokens / generation time); the run-wide
-        ``tokens_per_second`` divides total completion tokens by the run
-        duration.
+        still running). Token throughputs are split by direction:
+        ``avg_input_tokens_per_second`` / ``avg_output_tokens_per_second``
+        average the per-request rates (tokens / generation time), while
+        ``input_tokens_per_second`` / ``output_tokens_per_second`` divide the
+        run totals by the run duration.
         """
         total = len(self.results)
         failed = self.failed_requests
         finished = self.finished_at if self.finished_at is not None else time.time()
         duration = finished - self.started_at
+        prompt_tokens = sum(r.prompt_tokens for r in self.results)
         completion_tokens = sum(r.completion_tokens for r in self.results)
-        per_request_tps = [r.tokens_per_second for r in self.results if r.success]
+
+        def mean(values: list[float]) -> float:
+            return sum(values) / len(values) if values else 0.0
+
+        successful = [r for r in self.results if r.success]
         return {
             "duration_seconds": duration,
             "requests_total": total,
@@ -215,12 +221,22 @@ class LoadRun:
             "requests_failed": failed,
             "success_rate": (total - failed) / total if total else 0.0,
             "failure_rate": failed / total if total else 0.0,
-            "prompt_tokens": sum(r.prompt_tokens for r in self.results),
+            "prompt_tokens": prompt_tokens,
             "completion_tokens": completion_tokens,
-            "avg_tokens_per_second": (
-                sum(per_request_tps) / len(per_request_tps) if per_request_tps else 0.0
+            "avg_input_tokens_per_second": mean(
+                [
+                    r.prompt_tokens / r.generation_seconds
+                    for r in successful
+                    if r.generation_seconds > 0
+                ]
             ),
-            "tokens_per_second": completion_tokens / duration if duration > 0 else 0.0,
+            "avg_output_tokens_per_second": mean(
+                [r.tokens_per_second for r in successful]
+            ),
+            "input_tokens_per_second": prompt_tokens / duration if duration > 0 else 0.0,
+            "output_tokens_per_second": (
+                completion_tokens / duration if duration > 0 else 0.0
+            ),
         }
 
 
