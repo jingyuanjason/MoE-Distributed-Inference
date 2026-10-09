@@ -1,0 +1,45 @@
+{
+  "id": "multi-prompt-05",
+  "conversations": [
+    {
+      "from": "system",
+      "value": "You are a helpful assistant."
+    },
+    {
+      "from": "human",
+      "value": "Explain {word} like I'm a junior engineer who just joined the team."
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "How would this behave at scale?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "How does this affect performance?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "How does this fit into a larger system architecture?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "Can you give a step-by-step walkthrough of a typical use case?"
+    }
+  ]
+}

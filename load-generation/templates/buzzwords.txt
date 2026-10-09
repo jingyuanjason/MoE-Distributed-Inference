@@ -1,0 +1,1000 @@
+large language model
+mixture of experts
+transformer architecture
+attention mechanism
+multi-head attention
+grouped query attention
+multi-query attention
+KV cache
+prefill phase
+decode phase
+tokenization
+byte pair encoding
+sentencepiece
+embedding
+positional encoding
+rotary position embedding
+ALiBi
+fine-tuning
+instruction tuning
+LoRA
+QLoRA
+prefix tuning
+prompt tuning
+RLHF
+reward model
+DPO
+PPO
+constitutional AI
+prompt engineering
+few-shot learning
+zero-shot learning
+in-context learning
+chain-of-thought
+tree of thoughts
+self-consistency
+retrieval-augmented generation
+vector database
+vector index
+HNSW
+IVF index
+semantic search
+hybrid search
+reranker
+cross-encoder
+bi-encoder
+chunking strategy
+hallucination
+grounding
+guardrails
+jailbreaking
+prompt injection
+red teaming
+quantization
+GPTQ
+AWQ
+SmoothQuant
+FP8
+BF16
+FP16
+INT8
+INT4
+distillation
+knowledge distillation
+pruning
+structured pruning
+sparsity
+speculative decoding
+Medusa heads
+draft model
+continuous batching
+static batching
+dynamic batching
+paged attention
+flash attention
+flash decoding
+chunked prefill
+prefix caching
+tensor parallelism
+pipeline parallelism
+expert parallelism
+data parallelism
+sequence parallelism
+context parallelism
+fully sharded data parallel
+ZeRO optimizer
+gradient checkpointing
+activation recomputation
+mixed precision training
+gradient accumulation
+learning rate warmup
+cosine schedule
+AdamW
+gradient clipping
+weight decay
+dropout
+layer normalization
+RMSNorm
+batch normalization
+SwiGLU
+GeLU
+softmax
+logit
+temperature sampling
+top-p sampling
+top-k sampling
+beam search
+greedy decoding
+perplexity
+BLEU score
+ROUGE score
+context window
+long context
+sliding window attention
+sparse attention
+local attention
+global attention
+MoE routing
+router network
+load balancing loss
+auxiliary loss
+token dropping
+expert choice routing
+top-k gating
+shared expert
+fine-grained experts
+expert capacity factor
+all-to-all communication
+MoE sharding
+disaggregated serving
+preemption
+request scheduling
+TTFT
+TPOT
+time between tokens
+end-to-end latency
+goodput
+SLO attainment
+batch size scaling
+model parallelism
+inference engine
+vLLM
+TensorRT-LLM
+SGLang
+TGI
+model server
+OpenAI-compatible API
+streaming response
+server-sent events
+function calling
+structured output
+JSON mode
+grammar-constrained decoding
+logprobs
+stop sequences
+seeded sampling
+multimodal model
+vision language model
+audio language model
+tokenizer vocabulary
+byte-level BPE
+causal masking
+causal attention
+bidirectional attention
+encoder-decoder
+decoder-only model
+Mixtral
+DeepSeek MoE
+Qwen
+Llama
+GLM
+scaling laws
+Chinchilla law
+emergent abilities
+catastrophic forgetting
+alignment
+helpfulness vs harmlessness
+context distillation
+synthetic data
+data curation
+deduplication
+GPU
+CUDA core
+tensor core
+HBM memory
+GDDR memory
+NVLink
+NVSwitch
+PCIe
+PCIe switch
+RDMA
+InfiniBand
+RoCE
+GPUDirect
+GPUDirect RDMA
+NUMA
+SIMT
+warp scheduling
+thread block
+streaming multiprocessor
+GPU occupancy
+memory coalescing
+shared memory
+L2 cache
+register spilling
+kernel fusion
+CUDA graph
+memory bandwidth
+compute-bound workload
+memory-bound workload
+roofline model
+MFU
+GPU virtualization
+MIG
+GPU time-slicing
+GPU fraction
+unified virtual memory
+peer-to-peer memory access
+DMA
+interrupt coalescing
+zero-copy
+huge pages
+page-locked memory
+memory pool
+garbage collection
+memory fragmentation
+OOM killer
+cgroup
+namespace
+union filesystem
+overlayfs
+container
+docker
+OCI image
+container runtime
+containerd
+CRI-O
+pod
+sidecar container
+init container
+ephemeral container
+kubernetes
+kubelet
+kube-proxy
+API server
+etcd
+scheduler
+controller manager
+reconciler loop
+operator pattern
+custom resource definition
+helm chart
+kustomize
+service mesh
+istio
+linkerd
+envoy proxy
+ingress controller
+gateway API
+network policy
+CNI
+CSI
+storage class
+persistent volume
+statefulset
+daemonset
+deployment
+replicaset
+horizontal pod autoscaler
+vertical pod autoscaler
+cluster autoscaler
+KEDA
+pod disruption budget
+resource quota
+limit range
+priority class
+quality of service class
+taint and toleration
+node affinity
+pod anti-affinity
+topology spread constraint
+readiness probe
+liveness probe
+startup probe
+graceful shutdown
+termination grace period
+configmap
+secret
+service account
+RBAC
+clusterrole
+admission controller
+mutating webhook
+validating webhook
+OPA gatekeeper
+kyverno
+pod security standards
+seccomp
+apparmor
+SELinux
+capabilities
+rootless container
+sandboxed runtime
+gVisor
+kata containers
+kubeRay
+ray cluster
+ray autoscaler
+head node
+worker node
+placement group
+distributed filesystem
+object storage
+block storage
+erasure coding
+replication factor
+tiered storage
+write-ahead log
+LSM tree
+B-tree
+compaction
+columnar storage
+parquet
+arrow format
+data lake
+lakehouse
+ETL
+ELT
+stream processing
+batch processing
+lambda architecture
+kappa architecture
+change data capture
+watermark
+windowing
+exactly-once semantics
+at-least-once delivery
+idempotency
+dead letter queue
+message queue
+kafka
+pulsar
+rabbitmq
+consumer group
+partition rebalancing
+log compaction
+schema registry
+backpressure
+flow control
+circuit breaker
+bulkhead pattern
+retry with exponential backoff
+jitter
+rate limiting
+token bucket
+leaky bucket
+admission control
+load shedding
+graceful degradation
+failover
+health check
+heartbeat
+failure detector
+leader election
+raft consensus
+paxos
+quorum
+split brain
+fencing
+distributed lock
+two-phase commit
+three-phase commit
+saga pattern
+compensating transaction
+event sourcing
+CQRS
+eventual consistency
+strong consistency
+linearizability
+sequential consistency
+causal consistency
+TCP congestion control
+slow start
+BBR
+CUBIC
+QUIC
+HTTP/2
+HTTP/3
+gRPC
+websocket
+long polling
+MTLS
+TLS handshake
+certificate rotation
+SNI
+ALPN
+DNS resolution
+DNS caching
+TTL
+CDN
+edge computing
+edge cache
+cache invalidation
+cache hit ratio
+TTL-based eviction
+LRU cache
+LFU cache
+write-through cache
+write-back cache
+cache stampede
+request coalescing
+connection pooling
+keep-alive
+head-of-line blocking
+multiplexing
+flow control window
+zero-copy networking
+kernel bypass
+DPDK
+eBPF
+XDP
+overlay network
+VXLAN
+BGP anycast
+east-west traffic
+north-south traffic
+load balancer
+L4 load balancing
+L7 load balancing
+reverse proxy
+forward proxy
+API gateway
+request routing
+traffic mirroring
+traffic shaping
+weighted routing
+sticky session
+session affinity
+health-based routing
+global server load balancing
+MTU
+jumbo frames
+network latency
+bandwidth-delay product
+bufferbloat
+packet loss
+retransmission
+NAT
+SNAT
+DNAT
+firewall
+network segmentation
+microsegmentation
+VPC
+subnet
+peering
+transit gateway
+private link
+service discovery
+DNS-based discovery
+gossip-based discovery
+immutable infrastructure
+infrastructure as code
+terraform
+pulumi
+configuration management
+ansible
+gitops
+argocd
+flux
+CI/CD
+build pipeline
+artifact registry
+canary release
+blue-green deployment
+rolling update
+feature flag
+dark launch
+A/B testing
+progressive delivery
+rollback
+rollforward
+change management
+release train
+trunk-based development
+monorepo
+polyrepo
+observability
+telemetry
+openTelemetry
+distributed tracing
+trace context
+span
+structured logging
+log aggregation
+log sampling
+metrics cardinality
+histogram metric
+exemplar
+prometheus
+grafana
+alerting
+alert fatigue
+runbook
+on-call rotation
+incident response
+incident commander
+postmortem
+blameless culture
+SLO
+SLI
+SLA
+error budget
+burn rate
+availability
+nines of availability
+durability
+reliability
+resilience
+fault tolerance
+redundancy
+single point of failure
+blast radius
+fail fast
+timeout budget
+deadline propagation
+cascading failure
+thundering herd
+metastable failure
+retry storm
+queue depth
+little's law
+utilization law
+Amdahl's law
+universal scalability law
+tail latency
+P99 latency
+P50 latency
+latency percentile
+throughput
+bandwidth
+IOPS
+saturation
+USE method
+RED method
+golden signals
+four golden signals
+profiling
+flame graph
+continuous profiling
+benchmarking
+load testing
+stress testing
+soak testing
+spike testing
+capacity planning
+performance regression
+microbenchmark
+harness
+workload replay
+shadow traffic
+synthetic monitoring
+real user monitoring
+e2e testing
+integration testing
+contract testing
+property-based testing
+fuzzing
+mutation testing
+test coverage
+test pyramid
+test doubles
+mocking
+dependency injection
+inversion of control
+hexagonal architecture
+clean architecture
+domain-driven design
+bounded context
+aggregate
+entity
+value object
+anti-corruption layer
+strangler fig pattern
+monolith
+microservices
+modular monolith
+service-oriented architecture
+event-driven architecture
+pub-sub
+event bus
+orchestration
+choreography
+BFF pattern
+API composition
+graphql
+REST
+HATEOAS
+RPC
+mutex
+semaphore
+spinlock
+read-write lock
+lock-free data structure
+wait-free algorithm
+compare-and-swap
+atomic operation
+memory model
+happens-before
+race condition
+deadlock
+livelock
+starvation
+priority inversion
+convoy effect
+context switch
+system call
+virtual memory
+page fault
+swap
+mmap
+copy-on-write
+fork
+zombie process
+daemon process
+process supervisor
+init system
+systemd
+cgroup v2
+namespace isolation
+chroot
+seccomp-bpf
+io_uring
+epoll
+kqueue
+select
+polling
+interrupt
+softirq
+scheduler class
+CFS scheduler
+real-time scheduling
+CPU affinity
+CPU pinning
+hyperthreading
+cache line
+false sharing
+TLB
+branch prediction
+pipeline stall
+out-of-order execution
+speculative execution
+memory barrier
+futex
+condition variable
+happens-before relationship
+publish-subscribe
+actor model
+CSP
+channel
+select statement
+future
+promise
+callback hell
+reactive programming
+backpressure strategy
+circuit breaking
+timeout
+deadline
+cancellation
+structured concurrency
+virtual thread
+project loom
+garbage collector
+generational GC
+mark-and-sweep
+compacting GC
+stop-the-world pause
+escape analysis
+JIT compilation
+AOT compilation
+interpreter
+bytecode
+VM
+hypervisor
+paravirtualization
+hardware virtualization
+live migration
+snapshotting
+checkpoint restore
+CRIU
+firecracker
+microVM
+unikernel
+WASM
+wasi
+edge function
+serverless
+function as a service
+cold start
+warm pool
+provisioned concurrency
+FaaS scaling
+step functions
+durable execution
+workflow engine
+temporal
+cron scheduler
+message broker
+streaming platform
+materialized view
+CDC stream
+search index
+inverted index
+token filter
+stemming
+BM25
+TF-IDF
+embedding store
+approximate nearest neighbor
+product quantization
+locality sensitive hashing
+dimensionality reduction
+PCA
+t-SNE
+UMAP
+clustering
+k-means
+DBSCAN
+classification
+regression
+decision tree
+random forest
+gradient boosting
+XGBoost
+neural network
+convolutional neural network
+recurrent neural network
+LSTM
+GRU
+autoencoder
+variational autoencoder
+GAN
+diffusion model
+normalizing flow
+reinforcement learning
+Q-learning
+policy gradient
+actor-critic
+multi-armed bandit
+exploration vs exploitation
+online learning
+batch learning
+feature store
+feature engineering
+data drift
+concept drift
+model monitoring
+model registry
+model versioning
+model rollback
+champion-challenger
+shadow deployment
+canary model
+online evaluation
+offline evaluation
+A/B test for models
+interleaving evaluation
+human evaluation
+benchmark suite
+MMLU
+HumanEval
+GSM8K
+per-token latency
+tokens per second
+requests per second
+queries per second
+concurrency
+parallelism
+pipelining
+instruction pipelining
+superscalar execution
+SIMD
+AVX
+vectorization
+loop unrolling
+inlining
+dead code elimination
+link-time optimization
+profile-guided optimization
+memory allocator
+jemalloc
+tcmalloc
+arena allocation
+object pooling
+flyweight pattern
+interning
+string interning
+hash map
+trie
+radix tree
+suffix array
+rope data structure
+persistent data structure
+immutable data structure
+write amplification
+read amplification
+space amplification
+fsync
+journaling
+write batching
+group commit
+MVCC
+optimistic concurrency control
+pessimistic locking
+deadlock detection
+lock escalation
+isolation level
+read committed
+repeatable read
+serializable
+snapshot isolation
+phantom read
+dirty read
+non-repeatable read
+transaction
+ACID
+BASE
+savepoint
+nested transaction
+distributed transaction
+XA transaction
+connection pool sizing
+prepared statement
+N+1 query problem
+query planner
+cost-based optimizer
+index scan
+sequential scan
+covering index
+partial index
+composite index
+cardinality estimation
+table statistics
+vacuum
+autovacuum
+table partitioning
+range partitioning
+hash partitioning
+list partitioning
+partition pruning
+materialized view refresh
+upsert
+bulk insert
+write-heavy workload
+read-heavy workload
+OLTP
+OLAP
+HTAP
+star schema
+snowflake schema
+slowly changing dimension
+data warehouse
+data mart
+data mesh
+data fabric
+data lineage
+data catalog
+data governance
+data quality
+data contract
+schema on read
+schema on write
+ACID compliance
+time-series database
+graph database
+document database
+key-value store
+wide-column store
+relational database
+NewSQL
+Spanner
+CockroachDB
+Cassandra
+DynamoDB
+Redis
+Memcached
+PostgreSQL
+MySQL
+RocksDB
+SQLite
+ClickHouse
+Elasticsearch
+Solr
+Neo4j
+vector search engine
+full-text search
+faceted search
+autocomplete
+spell correction
+query expansion
+zero-trust security
+defense in depth
+least privilege
+OIDC
+OAuth 2.0
+JWT
+SAML
+SSO
+MFA
+passkey
+FIDO2
+HSM
+KMS
+envelope encryption
+key rotation
+secrets management
+vault
+encryption at rest
+encryption in transit
+end-to-end encryption
+homomorphic encryption
+differential privacy
+secure enclave
+confidential computing
+attestation
+supply chain security
+SBOM
+image signing
+cosign
+sigstore
+vulnerability scanning
+CVE
+CVSS score
+patch management
+penetration testing
+threat modeling
+attack surface
+lateral movement
+privilege escalation
+SQL injection
+XSS
+CSRF
+SSRF
+RCE
+buffer overflow
+use-after-free
+memory safety
+sandboxing
+seccomp profile
+WAF
+DDoS mitigation
+rate-limit bypass
+bot detection
+anomaly detection
+intrusion detection
+SIEM
+audit logging
+tamper-evident logging
+compliance
+SOC 2
+HIPAA
+GDPR
+data residency
+data sovereignty
+PII
+data masking
+tokenization of sensitive data
+retention policy
+right to be forgotten
+FinOps
+cost allocation
+showback
+chargeback
+spot instance
+reserved instance
+savings plan
+right-sizing
+autoscaling policy
+scale-to-zero
+cost per token
+cost per request
+GPU cost efficiency
+capacity reservation
+bin packing
+resource fragmentation
+stranded capacity
+overprovisioning
+underutilization
+chargeback model
+multi-tenancy
+noisy neighbor
+tenant isolation
+quota management
+fair scheduling
+weighted fair queuing
+deficit round robin
+priority queueing
+head-of-line blocking in queues
+work stealing
+work conservation

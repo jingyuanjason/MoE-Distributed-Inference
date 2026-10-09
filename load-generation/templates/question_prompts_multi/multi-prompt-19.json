@@ -1,0 +1,37 @@
+{
+  "id": "multi-prompt-19",
+  "conversations": [
+    {
+      "from": "system",
+      "value": "You are a helpful assistant."
+    },
+    {
+      "from": "human",
+      "value": "What should I watch out for when using {word} in production?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "How does this fit into a larger system architecture?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "Are there well-known tools or projects built around this?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "What are the main alternatives?"
+    }
+  ]
+}

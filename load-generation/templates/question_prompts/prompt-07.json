@@ -1,0 +1,7 @@
+{
+  "id": "prompt-07",
+  "conversations": [
+    {"from": "system", "value": "You are a helpful assistant."},
+    {"from": "human", "value": "Give me a short overview of {word} in the context of production systems."}
+  ]
+}

@@ -1,0 +1,22 @@
+[project]
+name = "load-generation"
+version = "0.1.0"
+description = "Highly parallel load generator and workload templates for production LLM serving"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.142.2",
+    "httpx>=0.28.1",
+    "pydantic>=2.0",
+    "pyyaml>=6.0.3",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

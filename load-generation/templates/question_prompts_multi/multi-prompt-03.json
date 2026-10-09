@@ -1,0 +1,53 @@
+{
+  "id": "multi-prompt-03",
+  "conversations": [
+    {
+      "from": "system",
+      "value": "You are a helpful assistant."
+    },
+    {
+      "from": "human",
+      "value": "Can you briefly explain {word} and why it matters?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "Can you give me a concrete example?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "Can you summarize that in one sentence?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "What metrics would you use to measure its impact?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "How would you test or validate this?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "What should I monitor when using this in production?"
+    }
+  ]
+}

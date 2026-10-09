@@ -1,0 +1,53 @@
+{
+  "id": "multi-prompt-08",
+  "conversations": [
+    {
+      "from": "system",
+      "value": "You are a helpful assistant."
+    },
+    {
+      "from": "human",
+      "value": "How does {word} work? Keep the explanation under 150 words."
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "How does this compare with related approaches?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "What happens when this fails?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "Can you show a minimal code or configuration example?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "Can you explain that last part in simpler terms?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "How does this affect performance?"
+    }
+  ]
+}

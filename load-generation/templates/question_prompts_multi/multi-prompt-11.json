@@ -1,0 +1,53 @@
+{
+  "id": "multi-prompt-11",
+  "conversations": [
+    {
+      "from": "system",
+      "value": "You are a helpful assistant."
+    },
+    {
+      "from": "human",
+      "value": "I keep hearing about {word}. What is it, in plain terms?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "What should I monitor when using this in production?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "Are there well-known tools or projects built around this?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "Can you show a minimal code or configuration example?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "Can you summarize that in one sentence?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "How does this compare with related approaches?"
+    }
+  ]
+}

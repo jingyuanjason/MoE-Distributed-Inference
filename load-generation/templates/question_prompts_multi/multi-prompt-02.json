@@ -1,0 +1,37 @@
+{
+  "id": "multi-prompt-02",
+  "conversations": [
+    {
+      "from": "system",
+      "value": "You are a helpful assistant."
+    },
+    {
+      "from": "human",
+      "value": "What is {word}? Give a concise explanation."
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "Are there well-known tools or projects built around this?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "What are the costs or overhead involved?"
+    },
+    {
+      "from": "gpt",
+      "value": "{response}"
+    },
+    {
+      "from": "human",
+      "value": "What should I monitor when using this in production?"
+    }
+  ]
+}

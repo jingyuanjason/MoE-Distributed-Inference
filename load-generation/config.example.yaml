@@ -1,0 +1,33 @@
+# Load generator configuration: sampling recipe + endpoint/dispatch settings.
+#
+# The "sampling" side (seed, buzzwords_file, sources) describes how the
+# PromptSampler mixes prompt sources. Each source picks a sampling strategy
+# ("type", mapped to a dedicated function in prompt_sampler.SAMPLING_FUNCTIONS),
+# a template directory, and a relative sampling ratio. Ratios need not sum to
+# 1 — they are normalized.
+
+seed: 42                    # optional; remove for non-deterministic sampling
+buzzwords_file: templates/buzzwords.txt
+
+sources:
+  - name: interactive_chat
+    type: single_round
+    templates_dir: templates/question_prompts
+    ratio: 0.8              # 80% single-round questions
+
+  - name: multi_turn_qa
+    type: multi_round
+    templates_dir: templates/question_prompts_multi
+    ratio: 0.2              # 20% multi-round sessions
+
+# Generator behavior settings (how the load generator behaves).
+# Endpoint information (ip_address, port, model) is NOT configured here —
+# it comes from each /load API request.
+behavior:
+  max_retries: 3            # attempts per message before marking the request failed
+  retry_backoff_base_seconds: 0.5   # exponential backoff: base * 2^(attempt-1)
+  request_timeout_seconds: 60
+
+# Dispatch loop settings.
+dispatch:
+  tick_interval_seconds: 0.01   # requests are released in batches every 10 ms
