@@ -5,6 +5,6 @@ port: 8000
 dtype: auto
 tensor-parallel-size: 1
 gpu-memory-utilization: 0.9
-max-model-len: 4096
+max-model-len: 32768
 # For supported MoE models, enable expert parallelism as needed:
 # enable-expert-parallel: true
