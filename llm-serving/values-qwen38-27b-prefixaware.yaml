@@ -1,0 +1,94 @@
+routerSpec:
+  livenessProbe:
+    failureThreshold: 6
+    httpGet:
+      path: /health
+      port: router-port
+    initialDelaySeconds: 60
+    periodSeconds: 10
+    timeoutSeconds: 5
+  lmcacheControllerHeartbeatPort: 9002
+  lmcacheControllerPort: 9000
+  lmcacheControllerReplyPort: 9001
+  repository: lmcache/lmstack-router
+  resources:
+    limits:
+      cpu: "4"
+      memory: 16G
+    requests:
+      cpu: "4"
+      memory: 16G
+  routingLogic: prefixaware
+  hf_token: ""
+  sessionKey: x-user-id
+  strategy:
+    type: Recreate
+  startupProbe:
+    failureThreshold: 60
+    httpGet:
+      path: /health
+      port: router-port
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    timeoutSeconds: 5
+  tag: v0.1.13
+servingEngineSpec:
+  modelSpec:
+  - env:
+    - name: VLLM_LOGGING_LEVEL
+      value: DEBUG
+    lmcacheConfig:
+      controllerPort: 9000
+      controllerReplyPort: 9001
+      cpuOffloadingBufferSize: "60"
+      enableController: true
+      enabled: false
+      logLevel: DEBUG
+      p2pHost: localhost
+      p2pInitPorts: "30081"
+      workerHeartbeatTime: "30"
+      workerPorts: "8001"
+    command:
+    - /bin/sh
+    - -c
+    - |
+      set -e
+      /opt/venv/bin/lmcache server \
+        --host localhost --port 5555 \
+        --chunk-size 784 --separate-object-groups \
+        --l1-size-gb 60 --eviction-policy LRU &
+      until /opt/venv/bin/python -c "import socket; socket.create_connection(('localhost', 5555), 1)" 2>/dev/null; do
+        echo "waiting for lmcache server on :5555"; sleep 2
+      done
+      exec /opt/venv/bin/vllm serve Qwen/Qwen3.8-27B-FP8 \
+        --host 0.0.0.0 --port 8000 \
+        --max-model-len 32768 --dtype auto --gpu-memory-utilization 0.9 \
+        --enable-prefix-caching --mamba-cache-mode align \
+        --max-num-batched-tokens 1567 \
+        --kv-transfer-config '{"kv_connector":"LMCacheMPConnector","kv_role":"kv_both","kv_connector_extra_config":{"lmcache.mp.host":"tcp://localhost","lmcache.mp.port":5555}}'
+    modelURL: Qwen/Qwen3.8-27B-FP8
+    name: qwen38-27b
+    pvcStorage:
+      emptyDir:
+        sizeLimit: 200Gi
+    replicaCount: 2
+    repository: lmcache/vllm-openai
+    requestCPU: 8
+    requestGPU: 1
+    requestMemory: 128Gi
+    tag: v0.5.6rc5-amd64
+    vllmConfig:
+      dtype: auto
+      enablePrefixCaching: true
+      gpuMemoryUtilization: "0.9"
+      maxModelLen: 32768
+  runtimeClassName: ""
+  strategy:
+    type: Recreate
+  startupProbe:
+    failureThreshold: 120
+    httpGet:
+      path: /health
+      port: 8000
+    initialDelaySeconds: 60
+    periodSeconds: 30
